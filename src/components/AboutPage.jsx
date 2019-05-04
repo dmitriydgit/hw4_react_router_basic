@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-
-class About extends Component {
+class AboutPage extends Component {
 	render() {
 		return (
 			<div>
+
+				<ul role='nav'>
+					<li>
+						<Link to='/'>Home</Link>
+					</li>
+					<li>
+						<Link to='/inboxPage'>Inbox page</Link>
+					</li>
+					<li>
+						<Link to='/messages'>Messages</Link>
+					</li>
+				</ul>
+				<hr></hr>
 				<h2>About</h2>
-				<p>
-					lorem ipsum
-				</p>
+				{this.props.children}
 			</div>
 		)
 	}
 }
 
-export default About;
+export default AboutPage;
